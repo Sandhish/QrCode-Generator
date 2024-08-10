@@ -1,0 +1,142 @@
+* {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.qrbody {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    display: block;
+}
+
+.upperbody {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.qrbody .heading {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(1, 142, 109);
+    border-bottom: 1px solid rgb(1, 142, 109);
+}
+
+label {
+    display: block;
+    margin: 9px 0px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(1, 142, 109);
+}
+
+input[type="url"],
+input[type="number"] {
+    width: inherit;
+    height: 45px;
+    padding: 7px;
+    font-size: 1em;
+    color: #444444;
+    font-family: 600;
+    border-radius: 15px;
+    border: 2px solid rgb(1, 142, 109);
+    outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:focus {
+    border: 2px solid rgb(0, 80, 62);
+}
+
+.qrbody img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    user-select: none;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+
+button {
+    padding: 8px;
+    margin: 10px 10px 0px 0px;
+    background-color: rgba(1, 142, 109);
+    font-size: 1em;
+    color: aliceblue;
+    border: 2px solid rgba(1, 142, 109);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all .8s;
+    user-select: none;
+}
+
+.buttons{
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 5px; 
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(0, 78, 59);
+}
+
+.generate:disabled,
+.download:disabled {
+    cursor: not-allowed;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 6px solid rgb(116, 111, 111);
+    border-radius: 50%;
+    border-top: 5px solid rgb(0, 129, 99);
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+    text-align: center;
+}
